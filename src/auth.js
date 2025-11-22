@@ -1,9 +1,9 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import db from "./db/connect.db";
-import * as schema from "./models/index";
+import db from "./db/connect.db.js";
+import * as schema from "./models/index.js";
 import { v4 as uuidv4 } from "uuid";
-import config from "./environment-variables";
+import config from "./environment-variables.js";
 
 export const auth = betterAuth({
   secret: config.BETTER_AUTH_SECRET,
@@ -48,4 +48,4 @@ export const auth = betterAuth({
     },
   },
 });
-export type Auth = typeof auth;
+

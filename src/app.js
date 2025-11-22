@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { fromNodeHeaders, toNodeHandler } from "better-auth/node";
-import { auth } from "./auth";
-import config from "./environment-variables";
+import { auth } from "./auth.js";
+import config from "./environment-variables.js";
 
 const app = express();
 const port = config.PORT || 3000;
